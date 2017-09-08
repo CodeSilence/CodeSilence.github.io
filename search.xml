@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[书写样式]]></title>
+    <url>%2Fwriting%2F%E6%96%87%E7%AB%A0%E4%B9%A6%E5%86%99%E6%A0%B7%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[1.文本居中引用立志飞龙腾空起 创学彩凤因云翔 2.文字居中显示这一行需要居中 3.Bootstrap Calloutdefault primary success info warning danger 4.文字增加背景色块 站点配置文件 主题配置文件 站点配置文件 主题配置文件 5.下载样式 Download Now 6.在文档中增加图标 支持MarkdownHexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。 一件部署只需一条指令即可部署到Github Pages，或其他网站 丰富的插件Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。]]></content>
+      <categories>
+        <category>writing</category>
+      </categories>
+      <tags>
+        <tag>写作技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于本站]]></title>
+    <url>%2FAbout%2F%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[主题 — NexT.Pisces NexT版本: 5.1.2 2017-08-18 站点创建 2017-08-19 站点开始优化 2017-09-05 新增1.新增每篇文章更新时间,updated,改为文章底部显示2.修改访问URL路径,domain/2017/08/18/关于本站-&gt;domain/About/关于本站 2017-09-06 优化1.优化分类标签,修复侧边栏分类不能点击2.新增404界面3.自定义代码块样式4.自定义文章底部版权信息5.新增代码块复制功能 2017-09-07 新增书写样式 2017-09 站点发布 未来新增：评论，统计、sitemap、导航栏logo、分享、优化404界面、站点压缩、购买域名、绑定新域名]]></content>
+      <categories>
+        <category>About</category>
+      </categories>
+      <tags>
+        <tag>关于</tag>
+      </tags>
+  </entry>
+</search>
