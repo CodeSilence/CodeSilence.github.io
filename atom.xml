@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-07T07:56:54.000Z</updated>
+  <updated>2017-09-11T16:01:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,89 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Next主题优化(三)</title>
+    <link href="http://yoursite.com/Hexo/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E4%B8%89/"/>
+    <id>http://yoursite.com/Hexo/Next主题优化-三/</id>
+    <published>2017-09-11T15:05:19.000Z</published>
+    <updated>2017-09-11T16:01:13.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-博文置顶&quot;&gt;&lt;a href=&quot;#1-博文置顶&quot; class=&quot;headerlink&quot; title=&quot;1.博文置顶&quot;&gt;&lt;/a&gt;1.博文置顶&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开&lt;code&gt;Hexo 站点&lt;/code&gt;下&lt;code&gt;node_modules/hexo-generator-index/lib/generator.js&lt;/code&gt;文件。代码全部替换为：&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;use strict&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var pagination = require(&lt;span class=&quot;string&quot;&gt;&#39;hexo-pagination&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;module&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;exports&lt;/span&gt; = function(locals)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  var config = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.config;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  var posts = locals.posts;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    posts.data = posts.data.sort(function(a, b) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a.top &amp;amp;&amp;amp; b.top) &amp;#123; &lt;span class=&quot;comment&quot;&gt;// 两篇文章top都有定义&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a.top == b.top) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; b.date - a.date; &lt;span class=&quot;comment&quot;&gt;// 若top值一样则按照文章日期降序排&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; b.top - a.top; &lt;span class=&quot;comment&quot;&gt;// 否则按照top值降序排&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a.top &amp;amp;&amp;amp; !b.top) &amp;#123; &lt;span class=&quot;comment&quot;&gt;// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!a.top &amp;amp;&amp;amp; b.top) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; b.date - a.date; &lt;span class=&quot;comment&quot;&gt;// 都没定义按照文章日期降序排&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  var paginationDir = config.pagination_dir || &lt;span class=&quot;string&quot;&gt;&#39;page&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; pagination(&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;, posts, &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    perPage: config.index_generator.per_page,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    layout: [&lt;span class=&quot;string&quot;&gt;&#39;index&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;archive&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    format: paginationDir + &lt;span class=&quot;string&quot;&gt;&#39;/%d/&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    data: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      __index: &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Next主题优化(二)</title>
+    <link href="http://yoursite.com/Hexo/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E4%BA%8C/"/>
+    <id>http://yoursite.com/Hexo/Next主题优化-二/</id>
+    <published>2017-09-11T14:02:30.000Z</published>
+    <updated>2017-09-11T15:39:21.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-主页文章添加边框阴影效果&quot;&gt;&lt;a href=&quot;#1-主页文章添加边框阴影效果&quot; class=&quot;headerlink&quot; title=&quot;1.主页文章添加边框阴影效果&quot;&gt;&lt;/a&gt;1.主页文章添加边框阴影效果&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1157148-4a95ec93410c5934.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;border.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开&lt;code&gt;themes/next/source/css/_custom/&lt;/code&gt;下的&lt;code&gt;custom.styl&lt;/code&gt;,向里面加代码:&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;// 主页文章添加阴影效果&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.post&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attribute&quot;&gt;margin-top&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0px&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attribute&quot;&gt;margin-bottom&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;60px&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;25px&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attribute&quot;&gt;-webkit-box-shadow&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;rgba&lt;/span&gt;(202, 203, 203, .5);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attribute&quot;&gt;-moz-box-shadow&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;rgba&lt;/span&gt;(202, 203, 204, .5);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Next主题优化(一)</title>
+    <link href="http://yoursite.com/Hexo/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E4%B8%80/"/>
+    <id>http://yoursite.com/Hexo/Next主题优化-一/</id>
+    <published>2017-09-11T12:53:35.000Z</published>
+    <updated>2017-09-11T15:06:49.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-常用命令&quot;&gt;&lt;a href=&quot;#1-常用命令&quot; class=&quot;headerlink&quot; title=&quot;1.常用命令&quot;&gt;&lt;/a&gt;1.常用命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Hexo的命令极简单，安装后只需要记住四个常用的即可。执行命令需要Git当前处于blog文件夹根目录下。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;generate 生成静态文件。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;server 启动服务器。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo s&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;deploy 部署网站。部署网站前，需要预先生成静态文件。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo d&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>书写样式</title>
     <link href="http://yoursite.com/writing/%E6%96%87%E7%AB%A0%E4%B9%A6%E5%86%99%E6%A0%B7%E5%BC%8F/"/>
     <id>http://yoursite.com/writing/文章书写样式/</id>
     <published>2017-09-07T04:00:00.000Z</published>
-    <updated>2017-09-07T07:56:54.000Z</updated>
+    <updated>2017-09-11T12:54:57.000Z</updated>
     
     <summary type="html">
     
@@ -46,7 +124,7 @@
     <link href="http://yoursite.com/About/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%82%B9/"/>
     <id>http://yoursite.com/About/关于本站点/</id>
     <published>2017-09-05T07:41:18.000Z</published>
-    <updated>2017-09-08T06:52:25.000Z</updated>
+    <updated>2017-09-12T03:14:19.000Z</updated>
     
     <summary type="html">
     
