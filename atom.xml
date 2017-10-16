@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://devinol.com/"/>
-  <updated>2017-09-12T08:30:42.000Z</updated>
+  <updated>2017-09-26T15:15:26.000Z</updated>
   <id>http://devinol.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Next主题优化(四)</title>
+    <link href="http://devinol.com/Hexo/Next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E5%9B%9B/"/>
+    <id>http://devinol.com/Hexo/Next主题优化-四/</id>
+    <published>2017-09-26T13:22:12.000Z</published>
+    <updated>2017-09-26T15:15:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-添加Google统计&quot;&gt;&lt;a href=&quot;#1-添加Google统计&quot; class=&quot;headerlink&quot; title=&quot;1.添加Google统计&quot;&gt;&lt;/a&gt;1.添加Google统计&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;访问&lt;a href=&quot;https://analytics.google.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google Analytics&lt;/a&gt;,需要登录,按照提示填写网站信息开通GA服务，获取统计ID。&lt;/li&gt;
+&lt;li&gt;编辑&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt; , 找到关键字&lt;code&gt;google_analytics&lt;/code&gt; , 删除注释&lt;code&gt;#&lt;/code&gt;并填写获取到的统计ID&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;google_analytics: your-analytics-id&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-开启不蒜子博客访问量统计&quot;&gt;&lt;a href=&quot;#2-开启不蒜子博客访问量统计&quot; class=&quot;headerlink&quot; title=&quot;2.开启不蒜子博客访问量统计&quot;&gt;&lt;/a&gt;2.开启&lt;code&gt;不蒜子&lt;/code&gt;博客访问量统计&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;编辑&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt; ,  找到关键字&lt;code&gt;busuanzi_count&lt;/code&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# Show PV/UV of the website/page with busuanzi.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;# Get more information on http://ibruce.info/2015/04/04/busuanzi/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;busuanzi_count:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  # count values only if the other configs are false&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  enable: true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  # custom uv span for the whole site&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  site_uv: true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  site_uv_header: &amp;lt;i class=&amp;quot;fa fa-user&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; 访问人数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  site_uv_footer:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  # custom pv span for the whole site&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  site_pv: true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  site_pv_header: &amp;lt;i class=&amp;quot;fa fa-eye&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; 总访问量&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  site_pv_footer:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  # custom pv span for one page only&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  page_pv: true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  page_pv_header: &amp;lt;i class=&amp;quot;fa fa-eye&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; 阅读次数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  page_pv_footer:&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://devinol.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://devinol.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Next主题优化(三)</title>
@@ -124,7 +152,7 @@
     <link href="http://devinol.com/About/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%82%B9/"/>
     <id>http://devinol.com/About/关于本站点/</id>
     <published>2017-09-05T07:41:18.000Z</published>
-    <updated>2017-09-12T12:03:11.000Z</updated>
+    <updated>2017-10-16T13:36:51.000Z</updated>
     
     <summary type="html">
     
