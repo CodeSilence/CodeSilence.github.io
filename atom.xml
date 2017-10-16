@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://devinol.com/"/>
-  <updated>2017-09-26T15:15:26.000Z</updated>
+  <updated>2017-10-16T14:41:58.000Z</updated>
   <id>http://devinol.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo-Next-问题总结</title>
+    <link href="http://devinol.com/Hexo/Hexo-Next-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    <id>http://devinol.com/Hexo/Hexo-Next-问题总结/</id>
+    <published>2017-10-16T14:26:17.000Z</published>
+    <updated>2017-10-16T14:41:58.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-写作问题&quot;&gt;&lt;a href=&quot;#1-写作问题&quot; class=&quot;headerlink&quot; title=&quot;1.写作问题&quot;&gt;&lt;/a&gt;1.写作问题&lt;/h2&gt;&lt;h3 id=&quot;1-1hexo的NexT主题，取消“文章目录”对标题的自动编号&quot;&gt;&lt;a href=&quot;#1-1hexo的NexT主题，取消“文章目录”对标题的自动编号&quot; class=&quot;headerlink&quot; title=&quot;1.1hexo的NexT主题，取消“文章目录”对标题的自动编号&quot;&gt;&lt;/a&gt;1.1hexo的NexT主题，取消“文章目录”对标题的自动编号&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1157148-580d49d3d521049a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt;,搜索关键字&lt;code&gt;number&lt;/code&gt;设为&lt;code&gt;false&lt;/code&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# Table Of Contents in the Sidebar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;toc:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  enable: true&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  # Automatically add list number to toc.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  number: false&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://devinol.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://devinol.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Next主题优化(四)</title>
@@ -152,7 +176,7 @@
     <link href="http://devinol.com/About/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%82%B9/"/>
     <id>http://devinol.com/About/关于本站点/</id>
     <published>2017-09-05T07:41:18.000Z</published>
-    <updated>2017-10-16T14:18:21.000Z</updated>
+    <updated>2017-10-16T14:19:10.000Z</updated>
     
     <summary type="html">
     
