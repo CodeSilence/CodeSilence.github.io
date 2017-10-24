@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WKWebView与JS交互]]></title>
+    <url>%2FiOS%2FWKWebView%E4%B8%8EJS%E4%BA%A4%E4%BA%92%2F</url>
+    <content type="text"><![CDATA[开发工具:Xcode9 语言:Swift4 系统环境:ipad ios10+ 1.修改背景色1webView.evaluateJavaScript("document.getElementsByTagName('body')[0].style.background = '#B0C4DE'", completionHandler: nil) 2.图片放大 遍历所有图片，width是按照当前webView的宽度比例,height = &#39;auto&#39;按照width自适应 12345678webView.evaluateJavaScript( """ for (var j=0;j&lt;document.images.length;j++) &#123; document.images[j].style.width = '50%'; document.images[j].style.height = 'auto'; &#125; """ , completionHandler: nil) 3.字体放大 iphone通常字体放大使用webkitTextSizeAdjust整体放大，但是此方法在iPad上不能使用。 3.1 iPhone字体放大1webView.evaluateJavaScript("document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '200%'", completionHandler: nil) 3.2 iPad字体放大1webView.evaluateJavaScript("document.getElementsByTagName('body')[0].style.fontSize = '200%'", completionHandler: nil) 特殊情况,当&lt;span style=\&quot;font-size: 18px;\&quot;&gt;设置了字体大小document.getElementsByTagName(&#39;body&#39;)[0].style.fontSize并不能去改变其字体大小.如要重新设置12345678// 所有span标签字体放大webView.evaluateJavaScript( """ for (var j=0;j&lt;document.getElementsByTagName('span').length;j++) &#123; document.getElementsByTagName('span')[j].style.fontSize = '100%'; &#125; """ , completionHandler: nil) 4. 禁止缩放 禁止WKWebView手势缩放1234567webView.evaluateJavaScript( """ var script = document.createElement('meta'); script.name = 'viewport';script.content=\"user-scalable=no\"; document.getElementsByTagName('head')[0].appendChild(script); """ , completionHandler: nil) 5. 初始化页面大小12345678webView.evaluateJavaScript( """ var script = document.createElement('meta'); script.name = 'viewport'; script.content=\"width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\"; document.getElementsByTagName('head')[0].appendChild(script); """, completionHandler: nil) 标签里的scale值就是页面的初始化页面大小,&lt; initial-scale &gt;和可伸缩放大最大&lt; maximum-scale &gt;和最小&lt; minimum-scale &gt;的的倍数,&lt;user-scalable&gt;是否支持缩放,如果还有别的需求可自行设置,如果都为1表示初始化的时候显示为原来大小,可缩放的大小都为原来的大小&lt;即不可缩放&gt;。]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo-Next-问题总结]]></title>
     <url>%2FHexo%2FHexo-Next-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[1.写作问题1.1hexo的NexT主题，取消“文章目录”对标题的自动编号 主题配置文件 ,搜索关键字number设为false123456# Table Of Contents in the Sidebartoc: enable: true # Automatically add list number to toc. number: false 1.2侧边栏的文章目录显示错误 比如一级 为 #标识 ,那么二级就用 ##,不能用三级 ### 1.3 在post.md配置的信息不起作用 新建文章写法: hexo new post &quot;your title&quot; 2.压缩问题 gulp 压缩 js 报错 是因为以后缀名为min.js的文件,无法进行压缩,修改如下123456// 压缩public目录下的所有js gulp.task('minify-js', function() &#123; return gulp.src(['./public/**/.js','!./public/js/**/*min.js']) .pipe(uglify()) .pipe(gulp.dest('./public'));&#125;); 3.繁琐的hexo clean、hexo g、hexo d 打开 站点配置文件 下的package.json文件，添加如下代码 12345"scripts": &#123; "build": "hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d", "test": "hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo s", "dev": "hexo clean &amp;&amp; hexo g &amp;&amp; hexo s"&#125; 命令行输入 npm run build ： 清除本地数据-&gt;静态编译-&gt;压缩-&gt;上传 命令行输入 npm run test ： 清除本地数据-&gt;静态编译-&gt;压缩-&gt;开启本地服务器 命令行输入 npm run dev ： 清除本地数据-&gt;静态编译-&gt;上传 4.GitHub仓库README问题 在站点根目录下的source文件夹内添加README.md，然后重新上传]]></content>
@@ -69,7 +81,7 @@
   <entry>
     <title><![CDATA[关于本站]]></title>
     <url>%2FAbout%2F%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%82%B9%2F</url>
-    <content type="text"><![CDATA[主题 — NexT.Pisces NexT版本: 5.1.2 2017-08-18 站点创建 2017-08-19 站点开始优化 2017-09-05 新增1.新增每篇文章更新时间,updated,改为文章底部显示2.修改访问URL路径,domain/2017/08/18/关于本站-&gt;domain/About/关于本站 2017-09-06 优化1.优化分类标签,修复侧边栏分类不能点击2.新增404界面3.自定义代码块样式4.自定义文章底部版权信息5.新增代码块复制功能 2017-09-07 新增文章《书写样式》 2017-09-08 站点发布到GitHub 2017-09-111.新增《Next主题优化(一)》2.新增《Next主题优化(二)》3.新增《Next主题优化(三)》4.修复文章底部版权信息,显示更新时间错误 2017-09-121.添加Google Analytics2.添加不蒜子3.购买域名4.绑定新域名5.修复gulp压缩js 错误,新增静态文件自动压缩6.新增分享、评论7.seo优化\sitemap 2017-09-261.关闭评论2.新增《Next主题优化(四)》3.添加快捷键 1234&quot;scripts&quot;: &#123; &quot;build&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d&quot;, &quot;test&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo s&quot;&#125; npm run build npm run test]]></content>
+    <content type="text"><![CDATA[主题 — NexT.Pisces NexT版本: 5.1.2 2017-08-18 站点创建 2017-08-19 站点开始优化 2017-09-05 新增1.新增每篇文章更新时间,updated,改为文章底部显示2.修改访问URL路径,domain/2017/08/18/关于本站-&gt;domain/About/关于本站 2017-09-06 优化1.优化分类标签,修复侧边栏分类不能点击2.新增404界面3.自定义代码块样式4.自定义文章底部版权信息5.新增代码块复制功能 2017-09-07 新增文章《书写样式》 2017-09-08 站点发布到GitHub 2017-09-111.新增《Next主题优化(一)》2.新增《Next主题优化(二)》3.新增《Next主题优化(三)》4.修复文章底部版权信息,显示更新时间错误 2017-09-121.添加Google Analytics2.添加不蒜子3.购买域名4.绑定新域名5.修复gulp压缩js 错误,新增静态文件自动压缩6.新增分享、评论7.seo优化\sitemap 2017-09-261.关闭评论2.新增《Next主题优化(四)》3.添加快捷键 1234&quot;scripts&quot;: &#123; &quot;build&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d&quot;, &quot;test&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo s&quot;&#125; npm run build npm run test 2017-10-161.新增《Hexo-Next-问题总结》 2017-10-241.新增《WKWebView与JS交互》]]></content>
       <categories>
         <category>About</category>
       </categories>

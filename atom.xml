@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://devinol.com/"/>
-  <updated>2017-10-16T14:41:58.000Z</updated>
+  <updated>2017-10-24T11:43:47.000Z</updated>
   <id>http://devinol.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WKWebView与JS交互</title>
+    <link href="http://devinol.com/iOS/WKWebView%E4%B8%8EJS%E4%BA%A4%E4%BA%92/"/>
+    <id>http://devinol.com/iOS/WKWebView与JS交互/</id>
+    <published>2017-10-24T11:36:22.000Z</published>
+    <updated>2017-10-24T11:43:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;开发工具:&lt;code&gt;Xcode9&lt;/code&gt; &lt;br&gt; 语言:&lt;code&gt;Swift4&lt;/code&gt;  &lt;br&gt; 系统环境:&lt;code&gt;ipad ios10+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-修改背景色&quot;&gt;&lt;a href=&quot;#1-修改背景色&quot; class=&quot;headerlink&quot; title=&quot;1.修改背景色&quot;&gt;&lt;/a&gt;1.修改背景色&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;webView.evaluateJavaScript(&lt;span class=&quot;string&quot;&gt;&quot;document.getElementsByTagName(&#39;body&#39;)[0].style.background = &#39;#B0C4DE&#39;&quot;&lt;/span&gt;, completionHandler: &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-图片放大&quot;&gt;&lt;a href=&quot;#2-图片放大&quot; class=&quot;headerlink&quot; title=&quot;2.图片放大&quot;&gt;&lt;/a&gt;2.图片放大&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;遍历所有图片，&lt;code&gt;width&lt;/code&gt;是按照当前webView的宽度比例,&lt;code&gt;height = &amp;#39;auto&amp;#39;&lt;/code&gt;按照&lt;code&gt;width&lt;/code&gt;自适应&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://devinol.com/categories/iOS/"/>
+    
+    
+      <category term="iOS" scheme="http://devinol.com/tags/iOS/"/>
+    
+      <category term="Swift" scheme="http://devinol.com/tags/Swift/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo-Next-问题总结</title>
@@ -176,7 +204,7 @@
     <link href="http://devinol.com/About/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%82%B9/"/>
     <id>http://devinol.com/About/关于本站点/</id>
     <published>2017-09-05T07:41:18.000Z</published>
-    <updated>2017-10-16T14:19:10.000Z</updated>
+    <updated>2017-10-24T11:46:06.000Z</updated>
     
     <summary type="html">
     
